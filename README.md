@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="image.png" alt="Banner" width="100%">
+  <img src="Banner.png" alt="Banner" width="100%">
 </p>
 
-<h1 align="center">🚀 Created by Mongaldip Chowdhury</h1>
+<h1 align="center">Created by Mongaldip Chowdhury</h1>
 
 <p align="center">
   Passionate about Web Development, AI, Programming, and Creative Digital Experiences.
