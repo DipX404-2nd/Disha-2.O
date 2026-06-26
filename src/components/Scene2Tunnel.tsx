@@ -25,8 +25,7 @@ export default function Scene2Tunnel({ onNext, onBack }: Scene2TunnelProps) {
     const interval = setInterval(() => {
       setProgress((prev) => {
         if (prev >= 100) {
-          handleNextImage();
-          return 0;
+          return 100;
         }
         return prev + 1.67; // approx 100% over 6 seconds (100 / 60 iterations per sec)
       });
@@ -34,6 +33,13 @@ export default function Scene2Tunnel({ onNext, onBack }: Scene2TunnelProps) {
 
     return () => clearInterval(interval);
   }, [currentIndex]);
+
+  // Handle auto-advance when progress reaches 100%
+  useEffect(() => {
+    if (progress >= 100) {
+      handleNextImage();
+    }
+  }, [progress]);
 
   const handleNextImage = () => {
     setDirection(1);
